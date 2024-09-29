@@ -1,4 +1,6 @@
 ---
+import alphaSort from 'alpha-sort';
+
 import { Container } from './container';
 
 type Category = 'productivity' | 'other' | 'security' | 'experiment';
@@ -58,12 +60,17 @@ const projects: Array<{
     website: 'https://pswd.mvze.net/',
   },
 ];
+
+const sorted = projects
+  .map(project => project.name)
+  .sort(alphaSort({ caseInsensitive: true }))
+  .map(name => projects.find(project => project.name === name));
 ---
 
 <Container>
   <section class="projects">
     {
-      projects.map(project => (
+      sorted.map(project => (
         <div class="project">
           <div class={`category ${project.category}`} />
           <p>{project.name}</p>
@@ -101,7 +108,7 @@ const projects: Array<{
         }
 
         &.security {
-          background-color: #38bdf8;
+          background-color: #f97316;
         }
 
         &.experiment {
