@@ -1,0 +1,85 @@
+---
+import { Container } from './container';
+---
+
+<Container>
+  <section class="about">
+    <p class="no-indent">Welcome, Wanderer.</p>
+    <p>
+      Imagine a web where you aren’t constantly interrupted by pop-ups, tracked
+      by invisible scripts, or bombarded by ads. A web that feels like a quiet
+      library—a place where you can explore freely, without someone watching
+      over your shoulder. That’s the web I dream of. <span
+        >And that’s why I built MazeNet.</span
+      >
+    </p>
+    <p>
+      <strong>MazeNet</strong> wasn’t born in a boardroom or drafted on a spreadsheet.
+      It was created late at night, fueled by frustration and a stubborn hope that
+      the internet could be better. I’d grown tired of visiting websites that treated
+      me as a commodity, a data point to be mined, analyzed, and sold. I wanted something
+      simpler—sites that valued purpose over profit, experience over engagement metrics.
+    </p>
+    <p>
+      So, I started building. One by one, I created single-purpose
+      websites—tools and applications designed to solve a specific problem
+      simply and effectively. No clutter, no distractions, no tracking. Just a
+      clear, focused experience. Little by little, these projects came together,
+      forming an ecosystem that embodies the values I care about: <span
+        >simplicity, transparency, and privacy.</span
+      >
+    </p>
+    <p>
+      <strong>MazeNet</strong> isn’t just a collection of websites. It’s a personal
+      project—a testament to what the web can be when it’s crafted by someone who
+      cares about people, not profits. Every site is open-source, because I believe
+      in transparency. Every site is free, because I believe the best things on the
+      internet should be. And every site respects your privacy, because your data
+      is yours, not mine.
+    </p>
+    <p>
+      I don’t run ads, I don’t track visitors, and I don’t clutter my sites with
+      features no one asked for. <strong>MazeNet</strong> isn’t here to grow clicks
+      or monetize attention. It’s here to offer a pure experience—a web that’s simple,
+      focused, and respectful.
+    </p>
+    <p>
+      This is a one-person mission. Funded by those who believe in it. Open to
+      anyone who wants to contribute. Created to give you something rare: <span
+        >a web that treats you like a person.</span
+      >
+    </p>
+  </section>
+</Container>
+
+<style>
+  .about {
+    padding: 100px 0;
+    font-family: var(--font-serif);
+    font-size: var(--font-lg);
+    color: var(--color-foreground-subtle);
+
+    & p {
+      line-height: 1.5;
+      text-indent: 24px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 36px;
+      }
+
+      &.no-indent {
+        text-indent: 0;
+      }
+
+      & span {
+        font-style: italic;
+        color: var(--color-foreground);
+      }
+
+      & strong {
+        font-weight: 500;
+        color: var(--color-foreground);
+      }
+    }
+  }
+</style>
