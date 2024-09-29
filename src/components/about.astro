@@ -51,7 +51,9 @@ import { Container } from './container';
     </p>
 
     <p class="no-indent author">
-      Maze Heart<br /><span>Creator of MazeNet</span>
+      <a href="https://remvze.com/">Maze Heart</a><br /><span
+        >Creator of MazeNet</span
+      >
     </p>
   </section>
 </Container>
@@ -77,11 +79,15 @@ import { Container } from './container';
 
       &.author {
         margin-top: 48px;
-        font-family: var(--font-cursive);
-        font-size: var(--font-xlg);
         line-height: 0.8;
-        color: var(--color-foreground);
         text-align: right;
+
+        & a {
+          font-family: var(--font-cursive);
+          font-size: var(--font-xlg);
+          color: var(--color-foreground);
+          text-decoration: none;
+        }
 
         & span {
           font-family: var(--font-sans);
