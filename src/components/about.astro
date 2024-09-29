@@ -49,6 +49,10 @@ import { Container } from './container';
         >a web that treats you like a person.</span
       >
     </p>
+
+    <p class="no-indent author">
+      Maze Heart<br /><span>Creator of MazeNet</span>
+    </p>
   </section>
 </Container>
 
@@ -69,6 +73,22 @@ import { Container } from './container';
 
       &.no-indent {
         text-indent: 0;
+      }
+
+      &.author {
+        margin-top: 48px;
+        font-family: var(--font-cursive);
+        font-size: var(--font-xlg);
+        line-height: 0.9;
+        color: var(--color-foreground);
+        text-align: right;
+
+        & span {
+          font-family: var(--font-sans);
+          font-size: var(--font-sm);
+          font-style: normal;
+          color: var(--color-foreground-subtle);
+        }
       }
 
       & span {

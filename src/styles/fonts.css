@@ -51,3 +51,12 @@
   src: url('/fonts/eb-garamond-v27-latin-600.woff2') format('woff2');
   font-display: swap;
 }
+
+/* whisper-regular - latin */
+@font-face {
+  font-family: Whisper;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/whisper-v5-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
