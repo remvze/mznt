@@ -4,6 +4,8 @@ import { Container } from './container';
 
 <Container>
   <section class="about">
+    <img alt="MazeNet Logo" class="logo" src="/logo.svg" />
+
     <p class="no-indent">Welcome, Wanderer.</p>
     <p>
       Imagine a web where you aren’t constantly interrupted by pop-ups, tracked
@@ -64,6 +66,13 @@ import { Container } from './container';
     font-family: var(--font-serif);
     font-size: var(--font-lg);
     color: var(--color-foreground-subtle);
+
+    & .logo {
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 36px;
+    }
 
     & p {
       line-height: 1.5;
