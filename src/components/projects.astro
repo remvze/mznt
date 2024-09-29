@@ -1,0 +1,146 @@
+---
+import { Container } from './container';
+
+type Category = 'productivity' | 'other' | 'security' | 'experiment';
+
+const projects: Array<{
+  category: Category;
+  github: string;
+  name: string;
+  website: string;
+}> = [
+  {
+    category: 'productivity',
+    github: 'https://github.com/remvze/moodist',
+    name: 'Moodist',
+    website: 'https://moodist.mvze.net/',
+  },
+  {
+    category: 'productivity',
+    github: 'https://github.com/remvze/timesy',
+    name: 'Timesy',
+    website: 'https://timesy.mvze.net/',
+  },
+  {
+    category: 'productivity',
+    github: 'https://github.com/remvze/calmness',
+    name: 'Calmness',
+    website: 'https://calmness.mvze.net/',
+  },
+  {
+    category: 'experiment',
+    github: 'https://github.com/remvze/nothing',
+    name: 'Nothing',
+    website: 'https://nothing.mvze.net/',
+  },
+  {
+    category: 'experiment',
+    github: 'https://github.com/remvze/progress',
+    name: 'Progress',
+    website: 'https://progress.mvze.net/',
+  },
+  {
+    category: 'experiment',
+    github: 'https://github.com/remvze/omniscale',
+    name: 'Omniscale',
+    website: 'https://omniscale.mvze.net/',
+  },
+  {
+    category: 'other',
+    github: 'https://github.com/remvze/converto',
+    name: 'Converto',
+    website: 'https://converto.mvze.net/',
+  },
+  {
+    category: 'security',
+    github: 'https://github.com/remvze/pswd',
+    name: 'PSWD',
+    website: 'https://pswd.mvze.net/',
+  },
+];
+---
+
+<Container>
+  <section class="projects">
+    {
+      projects.map(project => (
+        <div class="project">
+          <div class={`category ${project.category}`} />
+          <p>{project.name}</p>
+          <div class="divider" />
+          <div class="links">
+            <a href={project.website}>website</a>
+            <a href={project.github}>github</a>
+          </div>
+        </div>
+      ))
+    }
+  </section>
+</Container>
+
+<style>
+  .projects {
+    padding-bottom: 100px;
+
+    & .project {
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 12px;
+      }
+
+      & .category {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+
+        &.productivity {
+          background-color: #34d399;
+        }
+
+        &.security {
+          background-color: #38bdf8;
+        }
+
+        &.experiment {
+          background-color: #6366f1;
+        }
+
+        &.other {
+          background-color: #f43f5e;
+        }
+      }
+
+      & p {
+        font-size: var(--font-sm);
+        font-weight: 500;
+      }
+
+      & .divider {
+        flex-grow: 1;
+        border-top: 1px dashed var(--color-neutral-200);
+      }
+
+      & .links {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+
+        & a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 24px;
+          padding: 0 12px;
+          font-size: var(--font-2xsm);
+          color: var(--color-foreground-subtle);
+          text-decoration: none;
+          border: 1px solid var(--color-neutral-200);
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+</style>
