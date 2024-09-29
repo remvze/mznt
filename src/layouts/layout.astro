@@ -8,10 +8,11 @@ interface Props {
 }
 
 const title = Astro.props.title
-  ? `${Astro.props.title} — Maze Heart`
-  : 'Maze Heart';
+  ? `${Astro.props.title} — MazeNet`
+  : 'MazeNet: Open Ecosystem of Single-Purpose Websites';
 
-const description = Astro.props.description || 'Programming and Philosophy.';
+const description =
+  Astro.props.description || 'An open ecosystem of single-purpose websites.';
 
 const og = Astro.props.og || '/og.png';
 ---
@@ -31,7 +32,7 @@ const og = Astro.props.og || '/og.png';
 
     <meta content={title} property="og:title" />
     <meta content={description} property="og:description" />
-    <meta content="Maze Heart" property="og:site_name" />
+    <meta content="MazeNet" property="og:site_name" />
     <meta content="https://mznt.io/" property="og:url" />
     <meta content="website" property="og:type" />
     <meta content={`https://mznt.io${og}`} property="og:image" />
