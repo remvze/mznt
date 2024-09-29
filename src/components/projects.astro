@@ -64,7 +64,8 @@ const projects: Array<{
 const sorted = projects
   .map(project => project.name)
   .sort(alphaSort({ caseInsensitive: true }))
-  .map(name => projects.find(project => project.name === name));
+  .map(name => projects.find(project => project.name === name))
+  .filter(project => !!project);
 ---
 
 <Container>
