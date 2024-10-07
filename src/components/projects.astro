@@ -3,7 +3,12 @@ import alphaSort from 'alpha-sort';
 
 import { Container } from './container';
 
-type Category = 'productivity' | 'other' | 'security' | 'experiment';
+type Category =
+  | 'productivity'
+  | 'other'
+  | 'security'
+  | 'experiment'
+  | 'directory';
 
 const projects: Array<{
   category: Category;
@@ -58,6 +63,18 @@ const projects: Array<{
     github: 'https://github.com/remvze/pswd',
     name: 'PSWD',
     website: 'https://pswd.mvze.net/',
+  },
+  {
+    category: 'directory',
+    github: 'https://github.com/remvze/minimum',
+    name: 'Minimum',
+    website: 'https://minumum.mvze.net/',
+  },
+  {
+    category: 'directory',
+    github: 'https://github.com/remvze/night',
+    name: 'Night',
+    website: 'https://night.mvze.net/',
   },
 ];
 
@@ -118,6 +135,10 @@ const sorted = projects
 
         &.other {
           background-color: #f43f5e;
+        }
+
+        &.directory {
+          background-color: #d946ef;
         }
       }
 
